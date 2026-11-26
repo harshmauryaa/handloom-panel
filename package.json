@@ -1,0 +1,12 @@
+{
+  "name": "handloom-panel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser tool for handloom BMP designs: split rows by colour, split without white rows, and merge two designs.",
+  "scripts": {
+    "build": "node --check public/js/bmp.js && node --check public/js/split.js && node --check public/js/app.js",
+    "test": "node --test tests/*.test.mjs",
+    "deploy:cloudflare": "npx -y wrangler@4.40.0 pages deploy public --project-name=handloom-panel --branch=main --commit-dirty=true"
+  },
+  "engines": { "node": ">=20" }
+}
